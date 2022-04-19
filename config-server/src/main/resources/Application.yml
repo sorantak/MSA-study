@@ -15,4 +15,4 @@ spring:
     config:
       server:
         native:
-          search-location: classpath:configuration-repository/
+          search-locations: classpath:configuration-repository/

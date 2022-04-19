@@ -4,3 +4,7 @@ server:
 spring:
   application:
     name: templateEnterprise  # 서비스 ID (Config 클라이언트가 어떤 서비스를 조회할 것인지 매핑)
+
+  cloud:
+    config:
+      uri: http://localhost:8888

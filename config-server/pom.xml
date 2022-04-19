@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>egovframework.msa.sample</groupId>
-    <artifactId>config-seerver</artifactId>
+    <artifactId>config-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>config-server</name>
     <description>MSA Sample Project</description>

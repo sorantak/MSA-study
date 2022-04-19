@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class ConfigClientController {
 
-    @Value("${config.profile")
+    @Value("${config.profile}")
     private String profile;
 
     @Value("${config.message}")
