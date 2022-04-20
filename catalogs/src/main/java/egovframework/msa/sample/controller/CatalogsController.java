@@ -1,6 +1,8 @@
 package egovframework.msa.sample.controller;
 
 import egovframework.msa.sample.service.CustomerApiService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,8 +16,11 @@ public class CatalogsController {
     @Autowired
     private CustomerApiService customerApiService;
 
+    Logger logger = LoggerFactory.getLogger(CatalogsController.class);
+
     @GetMapping(path = "/{customerId}")
     public String getCustomerInfo(@PathVariable String customerId) {
+        logger.info("go to logstash");
         String customerInfo = customerApiService.getCustomerDetail(customerId);
         System.out.println("response customerInfo : " + customerInfo);
         return String.format("[Customer id = %s at %s %s ]", customerId,

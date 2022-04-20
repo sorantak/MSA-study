@@ -17,3 +17,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+logging:
+  file: /Users/cho/IdeaProjects/MSA-study/logs/catalogs.log
