@@ -115,6 +115,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+            <version>${spring.cloud.version}</version>
         </dependency>
         <!--        //expose metric by endpoint-->
 
@@ -134,11 +135,13 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
+            <version>${spring.cloud.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <version>${spring.cloud.version}</version>
         </dependency>
         <!--        //zipkin-->
 
