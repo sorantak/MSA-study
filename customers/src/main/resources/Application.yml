@@ -1,9 +1,14 @@
 server:
-  port: 8082
+  port: 8083
 
 spring:
   application:
     name: customer
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/./MSA-study/customer
+    username: sa
+    password: 1234
 
 eureka:
   instance:
