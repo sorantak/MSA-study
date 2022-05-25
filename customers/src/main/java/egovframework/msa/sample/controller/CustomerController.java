@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.util.List;
 
 @RestController
 @RequestMapping("/customers")
@@ -44,7 +45,7 @@ public class CustomerController {
     public String getDBInfo() {
         String url = "No URL";
         String userName = "No USERNAME";
-        try(Connection connection = dataSource.getConnection()){
+        try (Connection connection = dataSource.getConnection()) {
             url = connection.getMetaData().getURL();
             userName = connection.getMetaData().getUserName();
             logger.info("url : " + url + " & username : " + userName);
@@ -54,5 +55,15 @@ public class CustomerController {
         }
 
         return url + " & " + userName;
+    }
+
+    @GetMapping("/one")
+    public String getCustomer() {
+        String name = "etoos";
+        List<Customer> customer = customerRepository.findByName(name);
+        logger.info("*************");
+        logger.info("customer : " + customer.get(0).getId());
+        logger.info("*************");
+        return customer.get(0).getName();
     }
 }
