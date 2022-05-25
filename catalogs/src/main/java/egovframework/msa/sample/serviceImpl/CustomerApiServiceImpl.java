@@ -29,8 +29,8 @@ public class CustomerApiServiceImpl implements CustomerApiService {
     }
 
     public String getCustomerDetailFallback(String customerId, Throwable ex) {
-        logger.info("customerId : ", customerId);
-        logger.info("request fail" + ex.getMessage());
+        logger.error("circuitbreaker");
+        logger.error("request fail" + ex.getMessage());
         return "고객정보 조회가 지연되고 있습니다.";
     }
 }

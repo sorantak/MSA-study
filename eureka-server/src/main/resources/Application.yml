@@ -4,3 +4,8 @@ server:
 spring:
   application:
     name: EurekaServer
+
+eureka:
+  client:
+    register-with-eureka: false # 나 자신은 Eureka에 등록하지 않음
+    fetch-registry: false

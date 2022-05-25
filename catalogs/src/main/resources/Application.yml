@@ -4,8 +4,11 @@ server:
 spring:
   application:
     name: catalog
-#  zipkin:
-#    base-url: http://localhost:9411/zipkin/
+  zipkin:
+    enabled: true
+    service.name: catalog
+    sender.type: web
+    base-url: http://localhost:9411/zipkin/
 
 #Ribbon 의 listOfServers 목록은 Eureka 적용으로 불필요하여 주석처리
 
@@ -21,8 +24,8 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 logging:
-  file: C:\repositories\MSA-study\logs\catalogs.log
-#  file: /Users/cho/IdeaProjects/MSA-study/logs/catalogs.log
+#  file: C:\repositories\MSA-study\logs\catalogs.log
+  file: ./logs/catalogs.log
 
 management:
   endpoint:
